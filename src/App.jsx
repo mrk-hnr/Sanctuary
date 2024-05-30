@@ -7,6 +7,7 @@ import {
 import Error from './components/Error'
 
 import Home from "./pages/Home"
+import Login from "./pages/Login"
 import About from "./pages/About"
 import Cats, { loader as catsLoader } from "./pages/cats/Cats"
 import CatDetails from './pages/cats/CatDetails'
@@ -43,6 +44,8 @@ const router = createBrowserRouter(createRoutesFromElements(
           errorElement={<Error />} />
     <Route path="cats/:id" element={<CatDetails />} />
     <Route path="about" element={<About />} />
+
+    <Route path="login" element={<Login />}/>
 
     <Route path="dashboard" element={<DashLayout />} > {/* Parent */}
 
