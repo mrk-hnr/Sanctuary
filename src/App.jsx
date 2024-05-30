@@ -39,10 +39,12 @@ const router = createBrowserRouter(createRoutesFromElements(
          element={<Layout />}>
           
     <Route index element={<Home />} />
+
     <Route path="cats"
           element={<Cats />}
           loader={catsLoader}
           errorElement={<Error />} />
+          
     <Route path="cats/:id" element={<CatDetails />} />
     <Route path="about" element={<About />} />
 

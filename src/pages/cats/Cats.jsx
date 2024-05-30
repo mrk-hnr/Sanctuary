@@ -11,30 +11,29 @@ export function loader() {
 
 function Cats() {
     const [searchParams, setSearchParams] = useSearchParams()
-    // const [cats, setCats] = useState([])
-    
+    const [cats, setCats] = useState([])
     const [error, setError] = useState(null)
-    const cats = useLoaderData()
-
+    const [loading, setLoading] = useState(false)
+    const data = useLoaderData()
     
 
     const typeFilter = searchParams.get("gender")
 
-    // useEffect(() => {
-    //     async function loadCats() {
-    //         setLoading(true)
-    //         try {
-    //             const data = await getCats()
-    //             setCats(data)
+    useEffect(() => {
+        async function loadCats() {
+            setLoading(true)
+            try {
+                const data = await getCats()
+                setCats(data)
                 
-    //         } catch(err) {
-    //             setError(err)
-    //         } finally {
-    //             setLoading(false)
-    //         }  
-    //     }
-    //     loadCats()
-    // }, [])
+            } catch(err) {
+                setError(err)
+            } finally {
+                setLoading(false)
+            }  
+        }
+        loadCats()
+    }, [])
 
     // useEffect no longer needed as we can "fetch" the needed data using loader and useLoaderData.
 
