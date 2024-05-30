@@ -658,8 +658,52 @@ i[class*='catType-'] {
 .loginContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-inline: 2.5rem;
 }
 
+.loginContainer > h1 {
+  margin: 1rem 0;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 50rem;
+}
+
+.loginForm > input {
+  border: 1px solid rgba(210, 215, 220);
+  height: 4rem;
+  text-indent: 1rem;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 .1rem .2rem rgba(0, 0, 0, 0.05);
+  font-weight: 400;
+}
+
+.loginForm > input:focus {
+  outline: none;
+}
+
+.loginForm > input:first-of-type {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.loginForm > input:last-of-type {
+  border-radius: 0 0 1rem 1rem;
+  border-top: none;
+}
+
+.loginForm > button {
+  background: #FF8C38;
+  border: none;
+  border-radius: .5rem;
+  height: 5.5rem;
+  margin: 2.2rem 0;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
 
 /* ++++++++++++++++++++++++++++++++++++++++++++ */
 /* +++++++++++++++++ FOOTER +++++++++++++++++++*/

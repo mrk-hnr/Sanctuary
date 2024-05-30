@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "../App.css"
 
 function Login() {
     const [loginFormData, setLoginFormData] = useState({ email: "", password: "" })
@@ -18,7 +19,7 @@ function Login() {
     }
 
     return (
-        <div classsName="loginContainer">
+        <div className="loginContainer">
             <h1>Sign in to your account</h1>
             <form onSubmit={handleSubmit} className="loginForm">
                 <input

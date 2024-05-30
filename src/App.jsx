@@ -7,7 +7,7 @@ import {
 import Error from './components/Error'
 
 import Home from "./pages/Home"
-import Login from "./pages/Login"
+
 import About from "./pages/About"
 import Cats, { loader as catsLoader } from "./pages/cats/Cats"
 import CatDetails from './pages/cats/CatDetails'
@@ -27,6 +27,7 @@ import DashCatPhotos from './pages/dashboard/DashCatPhotos'
 import DashCatAge from './pages/dashboard/DashCatAge'
 
 import NotFound from './pages/NotFound'
+import Login from './pages/Login'
 
 
 import './App.css'
